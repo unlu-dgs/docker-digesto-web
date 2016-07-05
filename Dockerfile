@@ -8,9 +8,9 @@ RUN apt-get update
 
 RUN apt-get install -y mc
 
-RUN apt-get install php-pear php-mail php-net-smtp 
+RUN apt-get install -y php-pear php-mail php-net-smtp 
 
-RUN apt-get install poppler-utils
+RUN apt-get install -y poppler-utils
 
 RUN pear install html_quickform2
 
