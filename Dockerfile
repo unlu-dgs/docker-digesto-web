@@ -19,3 +19,5 @@ RUN pear install html_quickform2
 RUN pear install http://phptal.org/latest.tar.gz
 
 RUN pear install db
+
+RUN printf "max_execution_time=0" >> /usr/local/etc/php/php.ini
