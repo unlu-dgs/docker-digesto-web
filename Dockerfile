@@ -1,4 +1,4 @@
-FROM siutoba/docker-web:v1.7
+FROM siutoba/docker-web:v1.8
 ENV TERM=xterm
 MAINTAINER attentiondeficit@gmail.com
 
