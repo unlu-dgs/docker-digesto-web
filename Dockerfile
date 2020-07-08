@@ -7,7 +7,6 @@ RUN apk --no-cache add \
     php7-pdo_mysql \
     poppler-utils
 
-RUN pear config-set http_proxy http://proxy.unlu.edu.ar:8080
 RUN pear install html_quickform2
 RUN pear install http://phptal.org/latest.tar.gz
 RUN pear install db
