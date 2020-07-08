@@ -32,8 +32,10 @@ RUN apk --no-cache add \
     php7-xmlwriter \
     php7-xsl \
     libsodium \
-    apache2 \
     php7-apache2 \
+    php7-pear \
+    php7-pdo_mysql \
+    poppler-utils \
     curl \
     && rm -rf /var/cache/apk/* \
     #&& mkdir -p /run/apache2 \
@@ -45,12 +47,7 @@ RUN apk --no-cache add \
     && echo "ServerTokens Prod" >> /etc/apache2/httpd.conf \
     && echo "ServerSignature Off" >> /etc/apache2/httpd.conf \
     && echo "TraceEnable off" >> /etc/apache2/httpd.conf \
-    && cp /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
-RUN apk --no-cache add \
-    php7-pear \
-    php7-pdo_mysql \
-    poppler-utils
+    && echo $TZ > /etc/timezone
 
 RUN pear install html_quickform2
 RUN pear install http://phptal.org/latest.tar.gz
